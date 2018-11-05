@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+</body>
+<script>
+
+  function debounce(func, delay) {
+    var timeout;
+
+    return function(e) {
+      console.log("清除",timeout,e.target.value)
+      clearTimeout(timeout);
+      var context = this, args = arguments;
+      console.log("新的",timeout, e.target.value)
+      timeout = setTimeout(function(){
+        func.apply(null, args);
+        // func(context);
+      },delay)
+    };
+  };
+
+  var validate = debounce(function(e) {
+    console.log("change", e.target.value, new Date-0);
+  }, 2000);
+
+  // 绑定监听
+  document.querySelector("input").addEventListener('input', validate);
+
+
+ /* function Person(name)
+  {
+    this.name=name;
+    //this.age=age;
+  }
+
+  function Student(name,age,grade) {
+    Person.apply(this,arguments);
+    this.grade=grade;
+  }
+
+  var student=new Student("zhangsan",21,"一年级");
+  alert("name:"+student.name+"\n"+"age:"+student.age+"\n"+"grade:"+student.grade);
+
+  */
+
+</script>
+</html>

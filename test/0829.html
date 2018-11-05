@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // let a = {name:'cs',age:20};
+  // let b = Object.assign({},a);
+  // a.age = 22;
+  // console.log(b);
+
+  let obj = {
+    a: '123',
+    b: {
+      c: 456,
+      d: {
+        e: 789
+      }
+    }
+  };
+  console.log(JSON.stringify(obj));
+  let copy = JSON.parse(JSON.stringify(obj));
+</script>
+</html>

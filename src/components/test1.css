@@ -1,0 +1,15 @@
+.red {
+  color: #0c8ed9;
+}
+.red .button {
+  background: red;
+  font-size: 2 px;
+}
+.blue .button {
+  background: blue;
+}
+.box {
+  background: red;
+  font-size: 2 px;
+  font: 1px /  0.83333333px '宋体';
+}

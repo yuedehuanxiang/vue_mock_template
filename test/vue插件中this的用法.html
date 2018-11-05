@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+  {{mes}}
+</div>
+
+</body>
+<script>
+  Vue.prototype.$reverseText =function (propertyName) {
+    // this[propertyName] = this[propertyName]
+    //   .split('')
+    //   .reverse()
+    //   .join('')
+    console.log(this);
+  };
+
+  let vm = new Vue({
+    el:'#app',
+    data:{
+      mes:'welcome'
+    },
+    created: function () {
+      console.log(this.mes) // => "Hello"
+      this.$reverseText('mes');
+      console.log(this);
+      console.log(this.mes) // => "olleH"
+    }
+  });
+  console.log(vm);
+</script>
+</html>

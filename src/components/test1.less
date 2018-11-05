@@ -1,0 +1,17 @@
+@import "test2";
+.red{
+  color: #0c8ed9;
+  .button{
+    background: red;
+    font-size: round(1.6)px;
+  }
+}
+.blue{
+  .button{
+    background: blue;
+  }
+}
+.box{
+  .red > .button;
+  font:(12/@rem) ~'/ ' (10/@rem) '宋体';
+}

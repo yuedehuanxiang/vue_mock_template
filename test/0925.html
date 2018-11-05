@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function copy(obj) {
+    var vv = null;
+    if(typeof obj == 'object' && obj !== null){
+      vv = obj instanceof Array?[]:{};
+      for(var v in obj){
+        vv[v] = copy(obj[v]);
+      }
+    }else{
+      vv = obj;
+    }
+    return vv;
+  }
+</script>
+</html>

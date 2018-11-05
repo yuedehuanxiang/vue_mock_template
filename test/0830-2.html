@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // var t =(function () {
+  //   var a=1;
+  //   var b=2
+  //   return function () {
+  //     debugger
+  //     console.log(a += b);
+  //   }
+  // })()
+  // t()
+  // t()
+
+  // var array = ["囚徒","过客","领袖"];//职场3种人
+  // var o = {0:"linda",1:"style",2:"nick",length:3};
+  // for(var item in o){
+  //   console.log(item);
+  // }//0 1 2 length
+  // console.log(o);
+  // console.log(array);
+
+  var str = 'abc';
+  var map = Array.prototype.map;
+  var str2 = map.call(str,function (item) {
+    return item.toUpperCase()
+
+  });
+  // var str1 = str.map(function (item) {
+  //   return item.toUpperCase()
+  // });
+  console.log(str2);
+
+</script>
+</html>

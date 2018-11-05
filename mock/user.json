@@ -1,0 +1,10 @@
+{
+  "anchorList|3-6":[{
+    "id|1-100": 1,
+    "name": "@cname",
+    "date": "@date(yyyy-MM-dd)",
+    "arr|2-5": [{
+      "age|10-20": 0
+    }]
+  }]
+}

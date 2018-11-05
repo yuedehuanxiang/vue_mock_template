@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div v-color="red">{{msg}}</div>
+    <p :data-color="pink" v-node>123</p>
+  </div>
+</body>
+<script>
+  let vm = new Vue({
+    el:'#app',
+    directives:{
+      color:{
+        bind: function (el,binding,vnode) {
+          el.style.color = binding.value;
+          console.log(vnode);
+        }
+      },
+      node:{
+        bind:function (el,binding,vnode) {
+          console.log(el.dataset.color);
+          el.innerHTML = '789';
+          console.dir(el);
+          console.log(vnode);
+        }
+      }
+    },
+    data:{
+      msg:'hello',
+      red:'green',
+      pink:'ppp1'
+    },
+    computed:{
+
+    },
+    methods:{
+
+    }
+
+  })
+</script>
+</html>

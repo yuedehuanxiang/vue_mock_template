@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span style="margin: 0 100px;">222</span>
+</body>
+<script>
+  function aa() {
+    var a=0;
+    return function () {
+      a += 1;
+      console.log(a);
+    }
+  }
+  var c = aa();
+  c();
+  c();
+  console.log(a);
+
+</script>
+</html>
